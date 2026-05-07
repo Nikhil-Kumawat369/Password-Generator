@@ -1,0 +1,20 @@
+/* This CSS File Includes The Styling of the Body Tag & Universal Styling Too */
+
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: linear-gradient(135deg, #3b5b7a, #5a4b81);
+
+    /* Flex Properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
