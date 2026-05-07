@@ -1,0 +1,11 @@
+@media(max-width: 450px) {
+    #card {
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width: 350px) {
+    #card {
+        transform: scale(0.75);
+    }
+}

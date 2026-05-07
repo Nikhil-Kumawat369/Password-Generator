@@ -92,17 +92,77 @@
 /* Password Generating Parameters Section */
 #passwordGeneratingParametersSection {
     width: 100%;
-    height: 30%;
+    height: 35%;
     background: rgb(248, 249, 251);
     border: 1px solid rgb(235, 238, 242);
     border-radius: 1vmin; 
     box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 
+    /* Box Model Properties */
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     /* Flex Properties */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
+}
+
+/* Password Length Section */
+#passwordLengthSection {
+    width: 100%;
+    
+    /* Flex Properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+/* password Length Text */
+#passwordLengthText {
+    color: rgb(72, 72, 72);
+}
+
+/* Password Length Selector In Range Form */
+#passwordLengthSelectorRange {
+    width: 100px;
+}
+
+#passwordLengthSelectorRange::-webkit-slider-runnable-track {
+    background: rgb(230, 233, 238);
+    border-radius: 50vmin;
+}
+
+/* Password Length Display */
+#passwordLengthDisplay {
+    font-weight: bold;
+    background: rgb(210, 215, 225);
+    color: rgb(60, 65, 75);
+
+    /* Box Model Properties */
+    padding: 1px 4px 1px 4px;
+    margin-left: 5px;
+    border: 1px solid rgb(220, 225, 230);
+    border-radius: 1vmin;
+}
+
+/* Option Conatiner Common CSS Styling */
+.OptionContaier {
+    /* Flex Properties */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* All Option Selection Text */
+#IncludeUppercaseMsg , #IncludeLowercaseMsg , #IncludeNumberMsg , #IncludeSymbolMsg {
+    color: rgb(72, 72, 72);
 }
 
 /* Generate Password Button */
@@ -161,6 +221,7 @@
 
 /* Password Strength Value */
 #passwordStrengthValue {
+    font-weight: bold;
     color: rgb(76, 175, 125);
 }
 

@@ -22,6 +22,9 @@
     <!-- This CSS File Includes The Styling of the Card -->
     <link rel="stylesheet" href="/CSS/card.css">
 
+    <!-- This CSS File Includes Media Queries -->
+     <link rel="stylesheet" href="/CSS/media.css">
+
 
 </head>
 
@@ -39,7 +42,38 @@
         </div>
 
         <!-- This Is All Parameter Section For Generating Password -->
-        <div id="passwordGeneratingParametersSection"></div>
+        <div id="passwordGeneratingParametersSection">
+
+            <!-- Password Length Section -->
+            <div id="passwordLengthSection">
+                <span id="passwordLengthText">Password Length</span>
+                <span>
+                    <input type="range" id="passwordLengthSelectorRange" min="4" max="32" value="12">
+                    <span id="passwordLengthDisplay">12 <!-- This is the length of the password selected --> </span>
+                </span>
+            </div>
+
+            <!-- Include Uppercase Option Section -->
+            <div class="OptionContaier">
+                <input type="checkbox" id="IncludeUppercaseCheckbox" name="uppercase" value="1"><span id="IncludeUppercaseMsg">Inlcude Uppercase</span>
+            </div>
+
+            <!-- Include Lowercase Option Section -->
+            <div class="OptionContaier">
+                <input type="checkbox" id="IncludeLowercaseCheckbox" name="Lowercase" value="1"><span id="IncludeLowercaseMsg">Inlcude Lowercase</span>
+            </div>
+
+            <!-- Include Numbers Option Section -->
+            <div class="OptionContaier">
+                <input type="checkbox" id="IncludeNumberCheckbox" name="Number" value="1"><span id="IncludeNumberMsg">Inlcude Numbers</span>
+            </div>
+
+            <!-- Include Symbols Option Section -->
+            <div class="OptionContaier">
+                <input type="checkbox" id="IncludeSymbolCheckbox" name="Number" value="1"><span id="IncludeSymbolMsg">Inlcude Symbols</span>
+            </div>
+
+        </div>
 
         <!-- This Is Generate Password Button -->
         <button id="generatePasswordBtn"><i id="fa-solid-fa-key" class="fa-solid fa-key" style="color: rgb(255, 255, 255);"></i> <b>Generate Password</b></button>
@@ -49,7 +83,7 @@
 
             <div id="passwordStrengthMsgSection">
                 <span id="passwordStrengthMsg">Password Strength:</span>
-                <span id="passwordStrengthValue"><b>Strong</b></span>
+                <span id="passwordStrengthValue">Strong</span>
             </div>
 
             <div id="passwordStrengthBarOutter">
