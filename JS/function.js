@@ -24,11 +24,16 @@ export function generatePassword (IncludeUppercaseCheckbox , IncludeLowercaseChe
         CharacterPool += symbols;
     }
 
+    // If User Selects No Option , Then Return The Following
+    if(CharacterPool.length === 0){
+        return "Error";
+    }
+
     // Now Generating The Password 
     let passwordLength = Number(passwordLengthSelectorRange.value);
     let password = "";
 
-    for(let i = 1; i <= length; i++) {
+    for(let i = 1; i <= passwordLength; i++) {
         
         let idx = Math.floor(Math.random() * CharacterPool.length);
         password += CharacterPool[idx];
@@ -56,7 +61,7 @@ export function generatePassword (IncludeUppercaseCheckbox , IncludeLowercaseChe
         }
     }
     if(IncludeSymbolCheckbox.checked){
-        if(!(/^[A-Za-z0-9]/.test(password))){
+        if(!(/[^A-Za-z0-9]/.test(password))){
             regeneratePassword = true;
         }
     }
@@ -68,7 +73,7 @@ export function generatePassword (IncludeUppercaseCheckbox , IncludeLowercaseChe
         // Now Generating The Password 
         password = "";
 
-        for(let i = 1; i <= length; i++) {
+        for(let i = 1; i <= passwordLength; i++) {
             
             let idx = Math.floor(Math.random() * CharacterPool.length);
             password += CharacterPool[idx];
@@ -96,7 +101,7 @@ export function generatePassword (IncludeUppercaseCheckbox , IncludeLowercaseChe
             }
         }
         if(IncludeSymbolCheckbox.checked){
-            if(!(/^[A-Za-z0-9]/.test(password))){
+            if(!(/[^A-Za-z0-9]/.test(password))){
                 regeneratePassword = true;
             }
         }

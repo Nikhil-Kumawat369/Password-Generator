@@ -18,3 +18,14 @@ DOM.generatePasswordBtn.addEventListener("click" , () => {
     DOM.displayPasswordArea.innerText = fun.generatePassword(DOM.IncludeUppercaseCheckbox , DOM.IncludeLowercaseCheckbox , DOM.IncludeNumberCheckbox , DOM.IncludeSymbolCheckbox , DOM.passwordLengthSelectorRange);
     
 });
+
+// Event Listner To Copy The Generated Password Displayed On The Screen , By Clicking The Copy Symbol
+DOM.copyBtn.addEventListener("click" , () => {
+
+    if(DOM.displayPasswordArea === "Error"){
+        navigator.clipboard.writeText("");
+    }else{
+        navigator.clipboard.writeText(DOM.displayPasswordArea.innerText);
+    }
+
+});

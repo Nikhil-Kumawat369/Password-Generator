@@ -9,5 +9,6 @@ export let IncludeNumberCheckbox = window.document.body.querySelector("#IncludeN
 export let IncludeSymbolCheckbox = window.document.body.querySelector("#IncludeSymbolCheckbox");
 
 export let displayPasswordArea = window.document.body.querySelector("#password");
+export let copyBtn = window.document.body.querySelector("#copyBtn");
 
 export let generatePasswordBtn = window.document.body.querySelector("#generatePasswordBtn");
