@@ -20,12 +20,21 @@ DOM.generatePasswordBtn.addEventListener("click" , () => {
 });
 
 // Event Listner To Copy The Generated Password Displayed On The Screen , By Clicking The Copy Symbol
+// Also Showing A Copy PopUp
 DOM.copyBtn.addEventListener("click" , () => {
 
+    // Copying The Password
     if(DOM.displayPasswordArea === "Error"){
         navigator.clipboard.writeText("");
     }else{
         navigator.clipboard.writeText(DOM.displayPasswordArea.innerText);
     }
+
+    // Showing The PopUp
+    DOM.copyPopup.classList.toggle("show");
+    
+    setTimeout(() => {
+        DOM.copyPopup.classList.toggle("show");
+    } , 1500);
 
 });
