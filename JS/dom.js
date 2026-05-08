@@ -11,6 +11,9 @@ export let IncludeSymbolCheckbox = window.document.body.querySelector("#IncludeS
 export let displayPasswordArea = window.document.body.querySelector("#password");
 export let copyBtn = window.document.body.querySelector("#copyBtn");
 
+export let passwordStrengthValue = window.document.body.querySelector("#passwordStrengthValue");
+export let passwordStrengthBarInner = window.document.body.querySelector("#passwordStrengthBarInner");
+
 export let generatePasswordBtn = window.document.body.querySelector("#generatePasswordBtn");
 
 export let copyPopup = window.document.body.querySelector("#copyPopup");

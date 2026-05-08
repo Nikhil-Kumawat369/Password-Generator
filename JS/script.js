@@ -32,9 +32,16 @@ DOM.copyBtn.addEventListener("click" , () => {
 
     // Showing The PopUp
     DOM.copyPopup.classList.toggle("show");
-    
+
     setTimeout(() => {
         DOM.copyPopup.classList.toggle("show");
     } , 1500);
 
+});
+
+// Event Listner To Chnage The Password Strength Bar On Generating The Password
+DOM.generatePasswordBtn.addEventListener("click" , () => {
+
+    fun.passwordStrengthBarCssChange();
+    
 });
